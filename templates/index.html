@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Youtube Search
+        </title>
+    </head>
+    <body>
+        <form method = "POST">
+            <input type = "text" name = "search">
+        <button type = "submit" name = "Submit">Search</button>
+        </form>
+    </br>
+    </br>
+        {% for video in videos %}
+        <div>
+                <p>Video Title: {{ video.title }}</p>
+                <p>Views:{{ video.viewCount }}</p>
+                <p>Likes:{{ video.likeCount }}</p>
+                <p>Comments:{{ video.commentCount }}</p>
+                </br>
+                <a type = "button" href ="{{ video.url }}">View</a>
+                </br>
+                </br>
+                </br>
+
+        </div>
+        {% endfor %}
+    </body>
+</html>
